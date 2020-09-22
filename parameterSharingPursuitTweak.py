@@ -89,6 +89,7 @@ if __name__ == "__main__":
     if method == "A2C":
         tune.run(
             "A2C",
+            name="AEC_A2C",
             stop={"episodes_total": 60000},
             checkpoint_freq=10,
             local_dir="~/ray_results_aecgames",
@@ -123,6 +124,7 @@ if __name__ == "__main__":
         # APEX-DQN
         tune.run(
             "APEX",
+            name="AEC_ADQN",
             stop={"episodes_total": 60000},
             checkpoint_freq=10,
             local_dir="~/ray_results_aecgames",
@@ -156,7 +158,8 @@ if __name__ == "__main__":
     elif method == "DQN":
         # plain DQN
         tune.run(
-            "DQN", 
+            "DQN",
+            name="AEC_DQN",
             stop={"episodes_total": 60000},
             checkpoint_freq=10,
             local_dir="~/ray_results_aecgames",
@@ -188,6 +191,7 @@ if __name__ == "__main__":
     elif method == "IMPALA":
         tune.run(
             "IMPALA",
+            name="AEC_IMPALA",
             stop={"episodes_total": 60000},
             checkpoint_freq=10,
             local_dir="~/ray_results_aecgames",
@@ -222,6 +226,7 @@ if __name__ == "__main__":
     elif method == "PPO":
         tune.run(
             "PPO",
+            name="AEC_PPO",
             stop={"episodes_total": 60000},
             checkpoint_freq=10,
             local_dir="~/ray_results_aecgames",
@@ -266,6 +271,7 @@ if __name__ == "__main__":
     elif method == "RDQN":
         tune.run(
             "DQN",
+            name="AEC_RDQN",
             stop={"episodes_total": 60000},
             checkpoint_freq=10,
             local_dir="~/ray_results_aecgames",
